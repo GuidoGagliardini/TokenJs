@@ -1,0 +1,47 @@
+https://cloudflare.com/
+Node : 
+    npm i nodemailer (host:puerto)
+    npm i generate-password ({cantidadCaracteres , numericos : true})
+    npm i node-uuid (id unicos)
+
+
+    localhost:3000/verify/28f84859-728c-44b0-a1cf-0dfa6449da26
+
+    utils -> mailer.js
+    models/adminModel -> usuarios.js
+    routes/admin      -> usuarios.js
+            
+            generacion de password aleatorio (generate-password)
+            insertar el usuario dentro de la tabla usuarios (insertId)
+            insertar a la persona dentro de la tabla usuario_has_datos
+            enviar correo al mail del usuario con (nodemailer)
+                usuario : 'x'
+                contraseña : 'aaaaaa'
+                link para confirmar el alta 
+                    -> generacion por uuid
+                    -> generacion por token (expira)
+
+    .env
+        USER_CORREO = "dileo.francoj@gmail.com"
+        PASSWORD_CORREO = "..."
+        URL_SERVER = "http://localhost:3000"
+
+
+
+TAREA : 
+1.
+    JWT -> Expira
+    Cuando se genera el usuario generar un JWT con tiempo expiracion 1h
+    localhost:3000/verify/token 
+
+    1. Generacion de token en usuarios
+    2. Decodificacion de token en verify 
+    3. Actualizar estado en la tabla <=> el token es valido
+
+2. 
+    Password recovery (token)
+    POSTMAN -> correo
+        Se debe enviar un correo a la casilla especificada con la nueva contraseña (aleatorio del server) + link de activacion
+
+3. IMPLEMENTAR JIRA (CREAR TABLERO CON SU PROYECTO)
+4. IMPLEMENTAR KNEX EN PROYECTO
