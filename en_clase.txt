@@ -18,11 +18,11 @@ Node :
                 usuario : 'x'
                 contraseña : 'aaaaaa'
                 link para confirmar el alta 
-                    -> generacion por uuid
+                    -> generacion por uuid(gnnera una cadena de strings en hexadecimal)
                     -> generacion por token (expira)
 
     .env
-        USER_CORREO = "dileo.francoj@gmail.com"
+        USER_CORREO = "guidogaglia93@gmail.com"
         PASSWORD_CORREO = "..."
         URL_SERVER = "http://localhost:3000"
 
@@ -43,5 +43,5 @@ TAREA :
     POSTMAN -> correo
         Se debe enviar un correo a la casilla especificada con la nueva contraseña (aleatorio del server) + link de activacion
 
-3. IMPLEMENTAR JIRA (CREAR TABLERO CON SU PROYECTO)
-4. IMPLEMENTAR KNEX EN PROYECTO
+3. IMPLEMENTAR JIRA (me falta)
+4. IMPLEMENTAR KNEX EN PROYECTO (hecho)
